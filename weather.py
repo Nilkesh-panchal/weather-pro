@@ -29,31 +29,32 @@ cloudydic = json.loads(r.text)
 json.loads(r.text)
 heatdic = json.loads(r.text)
 
-print(weatherdic['current']['temp_c'])
-print(winddic['current']['wind_kph'])
-print(feeldic['current']['feelslike_c'])
-print(pressuredic['current']['pressure_mb'])
-print(humiditydic['current']['humidity'])
-print(cloudydic['current']['cloud'])
-print(heatdic['current']['heatindex_c'])   
+print("temperature :",weatherdic['current']['temp_c'],"°C")
+print("wind speed :",winddic['current']['wind_kph'],"kph")
+print("feels like :",feeldic['current']['feelslike_c'],"°C")
+print("pressure :",pressuredic['current']['pressure_mb'],"millibars")
+print("humidity :",humiditydic['current']['humidity'],"%")
+print("cloud coverage :",cloudydic['current']['cloud'],"%")
+print("heat index :",heatdic['current']['heatindex_c'],"°C")   
 
-cmd = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the temperature in {city} is {weatherdic['current']['temp_c']} degrees celsius')"
-os.system(cmd)
+cmd1 = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the temperature in {city} is {weatherdic['current']['temp_c']} degrees celsius')"
+os.system(cmd1)
 
-cmd = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the wind speed in {city} is {winddic['current']['wind_kph']} degrees celsius')"
-os.system(cmd)
+cmd2 = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the wind speed in {city} is {winddic['current']['wind_kph']} degrees celsius')"
+os.system(cmd2)
 
-cmd = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the feels like temperature in {city} is {feeldic['current']['feelslike_c']} degrees celsius')"
-os.system(cmd)
+cmd3 = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the feels like temperature in {city} is {feeldic['current']['feelslike_c']} degrees celsius')"
+os.system(cmd3)
 
-cmd = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the pressure in {city} is {pressuredic['current']['pressure_mb']} millibars')"
-os.system(cmd)
+cmd4 = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the pressure in {city} is {pressuredic['current']['pressure_mb']} millibars')"
+os.system(cmd4)
 
-cmd = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the humidity in {city} is {humiditydic['current']['humidity']} percent')"
-os.system(cmd)  
+cmd5 = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the humidity in {city} is {humiditydic['current']['humidity']} percent')"
+os.system(cmd5)  
 
-cmd = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the cloud coverage in {city} is {cloudydic['current']['cloud']} percent')"
-os.system(cmd)
+cmd6 = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the cloud coverage in {city} is {cloudydic['current']['cloud']} percent')"
+os.system(cmd6)
 
-cmd = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the heat index in {city} is {heatdic['current']['heatindex_c']} degrees celsius')"
-os.system(cmd)
+cmd7 = f"Powershell Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('the heat index in {city} is {heatdic['current']['heatindex_c']} degrees celsius')"
+os.system(cmd7)
+
